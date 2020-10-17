@@ -1,9 +1,9 @@
 module.exports = {
     xpager: {
-        dirName: "",
-        host: '',
-        user: '',
-        password: ''
+        dirName: "/m90286nj.beget.tech/public_html/projects",
+        host: 'http://m90286nj.beget.tech',
+        user: 'm90286nj_1',
+        password: '2722296q'
     },
     server: {
         path: "",

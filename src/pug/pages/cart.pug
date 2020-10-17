@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+
+	//- HEAD
+	include ../base/_head.pug
+
+	body
+		//- MIXINS
+		include ../base/_mixins.pug
+		//- SVG-SPRITE
+		include ../base/_svg-sprite.pug
+
+		//- SIDEBAR
+		include ../blocks/_sidebar.pug
+
+
+		//- ОСНОВАНЯ ОБЕРТКА
+		.wrap
+			//- HEADER-sticky
+			include ../sections/_header-sticky.pug
+
+			//- /HEADER
+			include ../sections/_header.pug
+
+			//- CART
+			include ../sections/_cart.pug
+
+
+			//- MAP 
+			include ../sections/_map.pug
+
+
+			//- FOOTER
+			include ../sections/_footer.pug
+
+
+			//- POPUPS
+			include ../blocks/forms/_callback.pug
+
+	include ../base/_scripts.pug

@@ -1,0 +1,39 @@
+.advantages
+    margin-bottom: 80px
+    +until-tablet
+        margin-bottom: 45px
+    &__cards
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+        grid-gap: 11px
+    &__card
+        border: 1px solid #EAEAEA
+        border-radius: 2px
+        width: 100%
+        background-color: #fff
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding: 35px 20px
+        &:hover
+            & .advantages__card-img
+                box-shadow: none
+        &-img
+            border-radius: 50%
+            width: 70px
+            height: 70px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: linear-gradient(180deg, #F9CD4A 0%, #D5A000 100%)
+            box-shadow: 0px 4px 4px #B56E00
+            transition: box-shadow .3s
+            margin-bottom: 15px
+        &-title
+            text-transform: uppercase
+            font-weight: bold
+            text-align: center
+            margin-bottom: 20px
+        &-text
+            text-align: center

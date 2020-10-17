@@ -1,0 +1,34 @@
+.header-sticky
+    .header-sticky__search
+        input(type="search" name="" placeholder="Поиск")
+        +svg('zoom','0 0 17 17','17','17')
+    .header-sticky__right
+        .header-sticky__contacts
+            .header-sticky__contacts-phone
+                +svg('icon-phone','0 0 17 17','17','17')
+                a(href="tel:+7 (812) 602-60-82") +7 (812) 602-60-82
+
+            a(data-fancybox,href="#callback").header-sticky__contacts-callback Заказать звонок
+        .header-sticky__menu
+            .header-sticky__catalog
+                | Каталог
+                .burger
+                    span
+                    span
+                    span
+                ul.header-sticky__catalog-list
+                    li.header-sticky__catalog-item
+                        a(href="#") Металлопрокат
+                    li.header-sticky__catalog-item
+                        a(href="#") Металлопрокат
+                    li.header-sticky__catalog-item
+                        a(href="#") Металлопрокат
+                    li.header-sticky__catalog-item
+                        a(href="#") Металлопрокат
+                    li.header-sticky__catalog-item
+                        a(href="#") Металлопрокат
+                    li.header-sticky__catalog-item
+                        a(href="#") Металлопрокат
+            .header-sticky__cart
+                +svg('icon-cart')
+                .header-sticky__cart-value 3

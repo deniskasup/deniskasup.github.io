@@ -1,0 +1,39 @@
+.catalog
+    margin-bottom: 80px
+    +until-tablet
+        margin-bottom: 45px
+    &__cards
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+        grid-gap: 30px 50px
+        margin-bottom: 70px
+        +until-desktop
+            margin-bottom: 40px
+    &__card
+        position: relative
+        overflow: hidden
+        border-radius: 2px
+        &:hover
+            .catalog__card-img
+                transform: scale(1.02)
+        &-img
+            width: 100%
+            height: 100%
+            transition: transform .3s
+            object-fit: cover
+        &-title
+            display: flex
+            align-items: center
+            justify-content: center
+            bottom: 0
+            width: 100%
+            height: 60px
+            position: absolute
+            background: rgba(255, 255, 255, 0.8)
+            border-radius: 0px 0px 2px 2px
+            & span
+                text-transform: uppercase
+                padding-bottom: 3px
+                border-bottom: 1px dashed #3C3C3B
+                text-align: center

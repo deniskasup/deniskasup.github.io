@@ -1,0 +1,97 @@
+.form
+    display: flex
+    align-items: center
+    flex-direction: column
+    &__title
+        font-family: Helvetica ,serif
+        text-align: center
+        margin-bottom: 7px
+    &__text
+        margin-bottom: 15px
+        text-align: center
+        font-size: 18px
+        line-height: 130%
+    &__error
+        margin-top: 7px
+        color: $red
+        font-size: 12px
+    &__inputs
+        width: 100%
+        max-width: 335px
+        display: grid
+        grid-gap: 6px
+        margin-bottom: 13px
+        & label
+            &.error
+                & input
+                    border-color: $red
+                    color: $red
+        & input
+            background-color: #fff
+            box-shadow: inset 0px 0px 10px rgba(171, 171, 171, 0.52)
+            border-radius: 2px
+            height: 45px
+            width: 100%
+            color: $black
+            padding-left: 14px
+            border: 1px solid transparent
+            transition: box-shadow .3s, border-color .3s
+            &:focus
+                box-shadow: none
+                border-color: $gray
+            &:hover
+                border-color: $gray
+                box-shadow: none
+    &__button
+        width: 100%
+        max-width: 335px
+        margin-bottom: 12px
+    &__checkbox
+        max-width: 335px
+        width: 100%
+        display: flex
+        &.error
+            & > span::before
+                border-color: $red
+        & input
+            display: none
+            &:error
+            &:checked + span
+                &::after
+                    opacity: 1
+            & + span
+                color: #B1B2B3
+                display: flex
+                align-items: flex-start
+                font-size: 12px
+                position: relative
+                & span
+                    font-size: 12px
+                & a
+                    font-size: 12px
+                    color: #B1B2B3
+                    border-bottom: 1px solid
+                    transition: border-color .3s
+                    &:hover
+                        border-bottom-color: transparent
+                &::before
+                    flex-shrink: 0
+                    content: ""
+                    width: 19px
+                    height: 19px
+                    border: 1px solid
+                    transition: border-color .3s
+                    margin-right: 8px
+                &::after
+                    position: absolute
+                    top: 5px
+                    left: 5px
+                    content: ''
+                    opacity: 0
+                    transition: opacity .3s
+                    width: 9px 
+                    height: 6px
+                    border-left: 2px solid $black
+                    border-bottom: 2px solid $black
+                    transform: rotate(-45deg)
+    

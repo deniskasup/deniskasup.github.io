@@ -1,0 +1,74 @@
+.reviews
+	width: 100%
+	&__top
+		display: flex
+		width: 100%
+		align-items: center
+		justify-content: center
+		margin-bottom: 20px
+		& span
+			font-weight: bold
+			margin-right: 20px
+		&-value
+			font-weight: bold
+			margin-right: 10px
+	&__button
+		cursor: pointer
+		border: 1px solid #EAEAEA
+		border-radius: 2px
+		padding: 16px 12px
+		background-color: #fff
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 45px
+		& span
+			display: flex
+			align-items: center
+			font-style: italic
+			font-weight: 300
+			font-size: 14px
+
+			color: #B1B2B3
+			& svg
+				width: 15px
+				height: 15px
+				margin-right: 11px
+		&-stars
+			display: flex
+			align-items: center
+			margin-right: 10px
+			fill: #B1B2B3
+			& svg
+				width: 11px
+				height: 11px
+				&:not(:last-of-type)
+					margin-right: 4px
+	&__list
+		width: 100%
+		display: flex
+		flex-direction: column
+	&__item
+		display: flex
+		align-items: flex-start
+		width: 100%
+		&:not(:last-of-type)
+			margin-bottom: 30px
+			
+		& .product-card__reviews-stars
+			margin-right: 25px
+			height: 16px
+		&-content
+			display: flex
+			flex-direction: column
+		&-user
+			margin-bottom: 10px
+			display: flex
+			align-items: center
+			& > *
+				margin-right: 5px
+				font-weight: bold
+
+	&__pagination
+

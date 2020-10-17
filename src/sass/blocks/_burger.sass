@@ -1,24 +1,20 @@
 .burger
-	width: 25px
-	height: 18px
+	width: 17px
+	height: 16px
 	height: max-content
 	cursor: pointer
-	position: relative
-	&.active
-		z-index: 50
-
-		
+	
 	span 
 		display: block
 		width: 100%
-		border-radius: 3px
+		border-radius: 5px
 		height: 2px
-		background: #fff
+		background: $black
 		transition: all .3s
 		position: relative
 
 	span + span 
-		margin-top: 5px
+		margin-top: 3px
 
 	&.active span:nth-child(1) 
 		animation: ease .7s top forwards
@@ -44,21 +40,21 @@
 		transform: rotate(0)
 
 	50%
-		top: 7px
+		top: 5px
 		transform: rotate(0)
 
 	100%
-		top: 7px
+		top: 5px
 		transform: rotate(45deg)
 
 
 @keyframes top-2 
 	0%
-		top: 7px
+		top: 5px
 		transform: rotate(45deg)
 
 	50%
-		top: 7px
+		top: 5px
 		transform: rotate(0deg)
 
 	100%
@@ -72,21 +68,21 @@
 		transform: rotate(0)
 
 	50%
-		bottom: 7px
+		bottom: 5px
 		transform: rotate(0)
 
 	100%
-		bottom: 7px
+		bottom: 5px
 		transform: rotate(135deg)
 
 
 @keyframes bottom-2 
 	0%
-		bottom: 7px
+		bottom: 5px
 		transform: rotate(135deg)
 
 	50%
-		bottom: 7px
+		bottom: 5px
 		transform: rotate(0)
 
 	100%
@@ -111,41 +107,3 @@
 
 	100%
 		transform: scale(1)
-
-
-
-.burger
-	&.active
-		& .burger__menu
-			max-width: 500px
-			max-height: 600px 
-			padding: 25px
-
-	&__menu
-		flex-shrink: 0
-		position: absolute
-		top: 150%
-		right: 120%
-		display: flex
-		flex-direction: column
-		background-color: #fff
-		width: max-content
-		overflow: hidden
-		transition: max-width .2s .3s, max-height .2s .3s, padding .3s .3s
-		height: auto
-		padding: 0
-		max-width: 0
-		max-height: 0
-		& *
-			flex-shrink: 0
-		&-nav
-			display: flex
-			flex-direction: column
-			& a
-				font-weight: 500
-				text-transform: uppercase
-				color: var(--black)
-				margin-bottom: 5px
-		& .header__signup
-			display: flex
-			margin: 10px 0 0

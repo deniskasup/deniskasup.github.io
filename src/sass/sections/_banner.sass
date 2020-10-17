@@ -1,0 +1,44 @@
+.banner
+    margin-bottom: 80px
+    +until-tablet
+        margin-bottom: 45px
+    & .swiper-container
+        width: 100%
+        &:hover
+            .swiper-buttons > *
+                visibility: visible
+                opacity: 1
+    & .swiper-buttons
+        & > *
+            opacity: 0
+            visibility: hidden
+
+    &__slide
+        width: 100%
+        position: relative
+        padding: 70px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        &-content
+            max-width: 330px
+            position: relative
+            z-index: 1
+            padding: 40px 25px
+            display: flex
+            flex-direction: column
+            background: rgba(255, 255, 255, 0.9)
+            border-radius: 2px
+        &-title
+            text-align: left
+            margin-bottom: 5px
+            font-family: Helvetica, sans-serif
+        &-text
+            margin-bottom: 20px
+        & img
+            top: 0
+            left: 0
+            position: absolute
+            width: 100%
+            height: 100%
+            object-fit: cover

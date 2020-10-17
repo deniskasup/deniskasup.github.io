@@ -1,17 +1,25 @@
-import Swiper, { Navigation} from 'swiper';
-Swiper.use([Navigation]);
+import Swiper, { Navigation, Pagination, Scrollbar, Thumbs, Autoplay, Lazy } from 'swiper';
+Swiper.use([Navigation, Pagination, Scrollbar, Thumbs, Autoplay, Lazy]);
 
-if(window.matchMedia('(max-width: 1200px)').matches) {
-	const sleakersSwiper = new Swiper('.speakers__cards', {
+const bannerSwiper = new Swiper('.banner .swiper-container', {
     loop: true,
     slidesPerView: 'auto',
     lazy: {
         loadPrevNext: true
-	},
+    },
     navigation: {
-        nextEl: '.speakers__cards .swiper-button-next',
-        prevEl: '.speakers__cards .swiper-button-prev',
+        nextEl: '.banner .swiper-button-next',
+        prevEl: '.banner .swiper-button-prev',
     }
 })
-
-}
+const popularSwiper = new Swiper('.product-slider .swiper-container', {
+    loop: true,
+    slidesPerView: 'auto',
+    lazy: {
+        loadPrevNext: true
+    },
+    navigation: {
+        nextEl: '.product-slider .swiper-button-next',
+        prevEl: '.product-slider .swiper-button-prev',
+    }
+})

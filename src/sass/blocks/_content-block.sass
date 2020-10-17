@@ -1,0 +1,90 @@
+.content-block
+	width: 100%
+	margin-bottom: 80px
+	+until-tablet
+		margin-bottom: 45px
+	& > a
+		border-bottom: 1px dashed
+		transition: border-bottom .3s
+		&:hover
+			border-bottom-color: transparent
+	& > b, > strong
+		margin-bottom: 20px
+	& p
+		margin-bottom: 20px
+		& > a
+			border-bottom: 1px dashed
+			transition: border-bottom .3s
+			&:hover
+				border-bottom-color: transparent
+	& .title-1
+		margin-left: auto
+		margin-right: auto
+	& ul
+		margin-bottom: 25px
+		font-size: 14px
+		line-height: 26px
+		@media ( max-width: 767px )
+			font-size: 14px
+			line-height: 24px
+		& > li
+			&::before
+				content: '-'
+				margin-right: 3px
+			& ul
+				& li
+					padding-left:
+					&::before
+						margin-left: 20px
+						content: '-'
+						margin-right: 3px
+	& ol
+		list-style: decimal
+		padding-left: 20px
+		margin-bottom: 25px
+		font-size: 14px
+		line-height: 26px
+		@media ( max-width: 767px )
+			font-size: 14px
+			line-height: 24px
+	&__more
+		display: block
+		width: max-content
+		text-align: center
+		margin: 10px auto
+		border-bottom: 1px dashed
+		transition: border-bottom .3s
+		&:hover
+			border-bottom-color: transparent
+	& .table-container
+		width: 100%
+		margin-bottom: 40px
+		+Hscroll
+		@media ( max-width: 1024px )
+			overflow-x: auto
+		& table
+			width: 100%
+			border-collapse: collapse
+			// border-style: hidden
+			& td, th
+				border: 1px solid #E0E0E2
+			th
+				min-width: 150px
+				font-size: 16px
+				font-weight: normal
+				background: #fff
+				text-align: center
+				padding: 15px 25px
+				@media ( max-width: 767px )
+					padding: 10px 15px
+				&:first-of-type
+					text-align: left
+			td
+				min-width: 150px
+				font-size: 14px
+				text-align: center
+				padding: 15px 25px
+				@media ( max-width: 767px )
+					padding: 10px 15px
+				&:first-of-type
+					text-align: left

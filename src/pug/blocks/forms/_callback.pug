@@ -1,0 +1,19 @@
+.popup#callback
+    .popup__form.form
+        h2.title-2.form__title Оставьте свои контакты ниже
+        .form__text мы Вам перезвоним в течение 15 минут
+        .form__inputs
+            label.error
+                input(type="text" placeholder="Укажите Ваше имя")
+                .form__error Ошибка
+            label
+                input(type="tel" placeholder="+7 (989) 999-99-99" name="PHONE")
+                .form__error
+        .form__button.yellow-btn Перезвоните мне
+        label.form__checkbox
+            input#callback-policy(type="checkbox" name="CHECK")
+            span
+                span 
+                    | Нажимая кнопку «Перезвоните мне», Вы потверждаете, что ознакомились с 
+                    a(href="#") Условиями обработки персональных данных 
+                    | и принимаете их

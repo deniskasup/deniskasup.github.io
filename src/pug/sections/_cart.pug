@@ -1,0 +1,93 @@
+section.cart
+	.wrapper
+		.cart__title-block
+			h1.title-1.cart__title Корзина
+			.cart__delete-all
+				a(href="#") Удалить все товары
+				.cart__delete-all-button
+					+svg('icon-close')
+
+		table.cart__list
+			thead.cart__list-header
+				th
+				th Цена
+				th Количество
+				th Стоимость
+				th
+			tbody.cart__list-items
+				tr.cart__item
+					td.cart__item-product
+						div
+							.cart__item-product-img
+								img(src="./img/beton/beton1.png" alt="")
+							.cart__item-product-info
+								a(href="#").cart__item-product-title Бетон товарный
+								.cart__item-product-art Арт. 998393
+					td.cart__item-price
+						| 0 руб.
+					td.cart__item-quantity
+						.quantity-block
+							button -
+							input(type="text" name="" min="0" value="2")
+							button +
+					td.cart__item-total-price 3000 руб.
+					td
+						.cart__item-delete
+							+svg('icon-close')
+				tr.cart__item
+					td.cart__item-product
+						div
+							.cart__item-product-img
+								img(src="./img/beton/beton1.png" alt="")
+							.cart__item-product-info
+								a(href="#").cart__item-product-title Бетон товарный
+								.cart__item-product-art Арт. 998393
+					td.cart__item-price
+						| 0 руб.
+					td.cart__item-quantity
+						.quantity-block
+							button -
+							input(type="text" name="" min="0" value="2")
+							button +
+					td.cart__item-total-price 3000 руб.
+					td
+						.cart__item-delete
+							+svg('icon-close')
+				tr.cart__item
+					td.cart__item-product
+						div
+							.cart__item-product-img
+								img(src="./img/beton/beton1.png" alt="")
+							.cart__item-product-info
+								a(href="#").cart__item-product-title Бетон товарный
+								.cart__item-product-art Арт. 998393
+					td.cart__item-price
+						| 0 руб.
+					td.cart__item-quantity
+						.quantity-block
+							button -
+							input(type="text" name="" min="0" value="2")
+							button +
+					td.cart__item-total-price 3000 руб.
+					td
+						.cart__item-delete
+							+svg('icon-close')
+		
+		.cart__total
+			.cart__total-content
+				.cart__total-print
+					+svg('icon-print')
+					span Распечатать смету
+				.cart__total-price
+					b Всего 3 товара на сумму
+					span 6 000 руб.
+					p Без учёта стоимости доставки
+		.cart__buttons
+			a(href="#").white-btn Вернуться к покупкам
+			a(href="#").yellow-btn Узнать стоимость с доставкой
+
+
+		//- ПУСТАЯ КОРЗИНА
+		//- .cart__empty
+		//- 	span Корзина пока пуста
+		//- 	a(href="#").yellow-btn  Вернуться к покупкам	

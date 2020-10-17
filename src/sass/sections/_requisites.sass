@@ -1,0 +1,35 @@
+.requisites
+    margin-bottom: 80px
+    +until-tablet
+        margin-bottom: 45px
+    &__list
+        width: 100%
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        justify-content: space-between
+        max-height: 230px
+    &__item
+        margin-bottom: 20px
+        display: flex
+        &-key
+            width: 100%
+            max-width: 245px
+            display: flex
+            align-items: flex-start
+            font-size: 14px
+            line-height: 120%
+            & span
+                flex-shrink: 0
+            &::after
+                margin: 0 3px
+                height: 13px
+                content: ''
+                width: 100%
+                border-bottom: 1px dotted $black
+        &-value
+            display: inline-table
+            width: auto
+            max-width: 330px
+            font-weight: bold
+            line-height: 120%

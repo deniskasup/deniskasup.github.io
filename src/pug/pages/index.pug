@@ -1,22 +1,25 @@
 doctype html
 html(lang="ru")
-	//- HEAD
-	include ../base/_head.pug
-	body(id="body")
 
-		//- SVG-SPRITE
-		include ../base/_svg-sprite.pug
-
-		//- MIXINS
-		include ../base/_mixins.pug
-		
-		//- MOBILEMENU
-		//- include ../blocks/_mobilemenu.pug
-
-		//- ОСНОВАНЯ ОБЕРТКА
-		.wrap
-			
-
-
-	//- SCRIPTS
-	include ../base/_scripts.pug
+    //- HEAD
+    include ../base/_head.pug
+    body
+        //- ОСНОВАНЯ ОБЕРТКА
+        .wrapper
+            ul
+                li
+                    a(href="./main.html") Главная
+                li  
+                    a(href="./contacts.html") Контакты
+                li
+                    a(href="./cart.html") Корзина
+                li
+                    a(href="./product-card.html") Карточка товара
+                li
+                    a(href="./delivery.html") Доставка и Оплата
+                li
+                    a(href="./catalog.html") Каталог
+                li
+            //-         a(href="./listing.html") Листинг
+            //-     li
+            //-         a(href="")

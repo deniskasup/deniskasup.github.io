@@ -1,0 +1,120 @@
+section.product-card
+	.wrapper
+		h1.title-1.product-card__title Бетон бетонный
+		.product-card__content
+			.product-card__top
+				.product-card__img
+					img(src="./img/beton/beton1.png" alt="")
+				.product-card__info
+					.product-card__price
+						p Арт. 998393
+						span 3 000 руб.
+					.product-card__info-left
+						.product-card__quantity.quantity-block
+							button -
+							input(type="text" name="" min="0" value="2")
+							button +
+						.yellow-btn
+							+svg('icon-cart', '0 0 19 19', '19', '19')
+							| В КОРЗИНУ
+
+						button.product-card__buy.white-btn КУПИТЬ В 1 КЛИК
+					.product-card__info-right
+						.product-card__delivery
+							b Доставка в Санкт-Петербург и Лен. область
+							a(href="#")
+								+svg('icon-delivery')
+								| Узнать стоимость с доставкой
+						.product-card__availability
+							+svg('icon-available')
+							| В наличии
+						.product-card__reviews
+							.product-card__reviews-stars.two
+								+svg('icon-star')
+								+svg('icon-star')
+								+svg('icon-star')
+								+svg('icon-star')
+								+svg('icon-star')
+							a(href="#").product-card__reviews-quantity 0 отзывов
+
+			.product-card__about
+				span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+			.product-card__tabs
+				.product-card__tabs-buttons(data-tabs="product-card__tabs-pages")
+					.product-card__tabs-button(data-tab-page="0").active Описание
+					.product-card__tabs-button(data-tab-page="1") 
+						| Отзывы (
+						span 0
+						| )
+				.product-card__tabs-pages
+					.product-card__tabs-page.content-block.active
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores quia voluptatem! Exercitationem, suscipit unde. Maiores, minus id et eaque natus consequuntur illo temporibus facilis, vel eveniet repellendus nemo neque!
+					.product-card__tabs-page
+						.reviews
+							.reviews__top 
+								span Средняя оценка
+								.reviews__top-value 4.9
+								.product-card__reviews-stars.two
+									+svg('icon-star')
+									+svg('icon-star')
+									+svg('icon-star')
+									+svg('icon-star')
+									+svg('icon-star')
+							a(href="#review" data-fancybox).reviews__button
+								span
+									+svg('icon-pen')
+									| Оставьте свой отзыв
+								.reviews__button-stars
+									+svg('icon-star')
+									+svg('icon-star')
+									+svg('icon-star')
+									+svg('icon-star')
+									+svg('icon-star')
+							.reviews__list
+								.reviews__item
+									.product-card__reviews-stars.two
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+									.reviews__item-content
+										.reviews__item-user
+											.reviews__item-user-name Ярослав
+											.reviews__item-user-date (30 августа)
+										.reviews__item-text
+											p Планка для столешницы соединительная 2.8 см цвет матовый хром и другие товары в данной категории доступны в каталоге интернет-магазина Леруа Мерлен в Москве по низким ценам. Ознакомьтесь с подробными характеристиками и описанием, а также отзывами о данном товаре, чтобы сделать правильный выбор и заказать товар онлайн.
+								.reviews__item
+									.product-card__reviews-stars.two
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+									.reviews__item-content
+										.reviews__item-user
+											.reviews__item-user-name Ярослав
+											.reviews__item-user-date (30 августа)
+										.reviews__item-text
+											p Планка для столешницы соединительная 2.8 см цвет матовый хром и другие товары в данной категории доступны в каталоге интернет-магазина Леруа Мерлен в Москве по низким ценам. Ознакомьтесь с подробными характеристиками и описанием, а также отзывами о данном товаре, чтобы сделать правильный выбор и заказать товар онлайн.
+								.reviews__item
+									.product-card__reviews-stars.two
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+										+svg('icon-star')
+									.reviews__item-content
+										.reviews__item-user
+											.reviews__item-user-name Ярослав
+											.reviews__item-user-date (30 августа)
+										.reviews__item-text
+											p Планка для столешницы соединительная 2.8 см цвет матовый хром и другие товары в данной категории доступны в каталоге интернет-магазина Леруа Мерлен в Москве по низким ценам. Ознакомьтесь с подробными характеристиками и описанием, а также отзывами о данном товаре, чтобы сделать правильный выбор и заказать товар онлайн.
+
+

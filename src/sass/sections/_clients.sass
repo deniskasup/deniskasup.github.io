@@ -1,0 +1,17 @@
+.clients
+    margin-bottom: 80px
+    +until-tablet
+        margin-bottom: 45px
+    &__list
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-around
+        &-img
+            & img
+                filter: grayscale(1)
+                transition: filter .3s
+                margin-bottom: 10px
+                &:hover
+                    filter: grayscale(0)

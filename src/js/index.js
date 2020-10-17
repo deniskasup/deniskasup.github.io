@@ -1,38 +1,43 @@
 var t0 = performance.now();
 
-import $, { event } from "jquery";
+import $ from "jquery";
 window.jQuery = $
 window.$ = $
 
 // PLUGINS======================================================================================
-// import Inputmask from 'inputmask'
-// import LazyLoad from "vanilla-lazyload";
-// import '@fancyapps/fancybox'
-// import './js-modules/datepicker.js'
+import Inputmask from 'inputmask'
+import LazyLoad from "vanilla-lazyload"
+
+import '@fancyapps/fancybox'
 
 // MODULES======================================================================================
-// import './js-modules/sliders.js'
-// import initAnimations from './js-modules/animations.js'
+import './js-modules/sliders.js'
+import stickyHeader from './js-modules/header.js'
+import initAnimations from './js-modules/animation.js'
+import initTabs from './js-modules/tabs.js'
+
 
 // init ========================================================================================
 $(() => {
-	
-	// var lazyLoadInstance = new LazyLoad();
-	// $('[data-fancybox]').fancybox({
-	// 	smallBtn: true,
-	// });
 
-	// const burger = document.querySelector('.burger')
-	// burger.addEventListener('click', () => {
-	// 	burger.classList.toggle('active')
-	// })
+    document.querySelectorAll('.burger').forEach(burger => {
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('active')
+            })
+        })
 
-	// initAnimations()
-	
+    var lazyLoadInstance = new LazyLoad();
+    let im = new Inputmask("+7 (999) 999-99-99")
+    im.mask(document.querySelectorAll('input[name="PHONE"]'))
+        // $('[data-fancybox]').fancybox({
+        // 	smallBtn: true,
+        // })
 
-	
+    // CUSTOM FUNCTIONS
+	stickyHeader()
+	initTabs()
+    initAnimations()
 })
 
 var t1 = performance.now();
 console.log('Load index.js in', (t1 - t0).toFixed(4), 'milliseconds');
-

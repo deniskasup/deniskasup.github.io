@@ -1,0 +1,28 @@
+.breadcrumbs
+    margin: 25px auto 15px
+    width: 100%
+    max-width: 1132px
+    position: relative
+    padding-left: 1rem
+    padding-right: 1rem
+    align-self: flex-start
+    display: flex
+    align-items: center
+    &__item
+        font-weight: 300
+        font-size: 12px
+        line-height: 120%
+        color: #B1B2B3
+        &:not(:last-of-type)
+            &::after
+                content: '/'
+                margin: 0 5px
+        & a
+            font-weight: 300
+            font-size: 12px
+            line-height: 120%
+            color: #B1B2B3
+            transition: border-bottom-color .3s
+            border-bottom: 1px solid transparent
+            &:hover
+                border-bottom-color: currentColor

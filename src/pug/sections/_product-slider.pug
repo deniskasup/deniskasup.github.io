@@ -1,0 +1,41 @@
+section.product-slider
+    .wrapper
+        h1.title-1 Популярные товары
+        .swiper-container.fadeInUp
+            .swiper-buttons
+                .swiper-button-prev
+                .swiper-button-next
+            .swiper-wrapper
+                .swiper-slide.product-slider__slide
+                    .product-slider__slide-img
+                        img(src="./img/beton/beton1.png", alt="")
+                    a(href="#").product-slider__slide-title Бетон товарный
+                    .product-slider__slide-price
+                        span 32 000₽
+                        .product-slider__slide-price-availability
+                            | В наличии
+                    .product-slider__slide-button.yellow-btn
+                        +svg('icon-cart', '0 0 19 19', '19', '19')
+                        | В КОРЗИНУ
+                .swiper-slide.product-slider__slide
+                    .product-slider__slide-img
+                        img(src="./img/beton/beton2.png", alt="")
+                    a(href="#").product-slider__slide-title Бетон товарный Зернистый
+                    .product-slider__slide-price
+                        span 2 000₽
+                        .product-slider__slide-price-availability
+                            | В наличии
+                    .product-slider__slide-button.yellow-btn
+                        +svg('icon-cart', '0 0 19 19', '19', '19')
+                        | В КОРЗИНУ
+                .swiper-slide.product-slider__slide
+                    .product-slider__slide-img
+                        img(src="./img/beton/beton3.png", alt="")
+                    a(href="#").product-slider__slide-title Бетон товарный товарный бетон
+                    .product-slider__slide-price
+                        span 5 000₽
+                        .product-slider__slide-price-availability
+                            | В наличии
+                    .product-slider__slide-button.yellow-btn
+                        +svg('icon-cart', '0 0 19 19', '19', '19')
+                        | В КОРЗИНУ

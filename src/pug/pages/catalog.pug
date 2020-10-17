@@ -1,0 +1,101 @@
+doctype html
+html(lang="ru")
+
+	//- HEAD
+	include ../base/_head.pug
+
+	body
+		//- MIXINS
+		include ../base/_mixins.pug
+		//- SVG-SPRITE
+		include ../base/_svg-sprite.pug
+
+		//- SIDEBAR
+		include ../blocks/_sidebar.pug
+
+
+		//- ОСНОВАНЯ ОБЕРТКА
+		.wrap
+			//- HEADER-sticky
+			include ../sections/_header-sticky.pug
+
+			//- /HEADER
+			include ../sections/_header.pug
+
+			//- BREADCRUMBS
+			include ../blocks/_breadcrumbs.pug
+
+			//- CATALOG
+			include ../sections/_catalog-page.pug
+
+
+			//- ADVANTAGES
+			include ../sections/_advantages.pug
+
+			//- CONTENT
+			.wrapper
+				.content-block
+					h1.title-1 Тут блок с текстом
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan 
+						a(href="#") sed
+
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+					p  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+					a(href="#").content-block__more Читать далее
+					ul
+						li bla bla
+						li bla bla
+						li bla bla
+						li bla bla
+						li bla bla
+					ol
+						li bla bla
+						li bla bla
+						li bla bla
+						li bla bla
+					.table-container
+						table
+							thead
+								th раздва3
+								th Lorem, ipsum dolor.
+								th Lorem, ipsum.
+								th Lorem, ipsum.
+							tbody
+								tr
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+								tr
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+									td Lorem, 
+									td Lorem, 
+								tr
+									td Lorem, 
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+								tr
+									td Lorem, ipsum.
+									td Lorem
+									td Lorem, ipsum.
+									td Lorem, ipsum.
+
+
+			//- CLIENTS 
+			include ../sections/_clients.pug
+
+			//- MAP 
+			include ../sections/_map.pug
+
+
+			//- FOOTER
+			include ../sections/_footer.pug
+
+
+			//- POPUPS
+			include ../blocks/forms/_callback.pug
+
+	include ../base/_scripts.pug
