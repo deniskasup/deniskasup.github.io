@@ -1,0 +1,61 @@
+.custom-checkbox
+	display: none
+	&:checked
+		& + span::after
+			opacity: 1
+	& + span
+		position: relative
+		display: flex
+		align-items: center
+		&::before
+			margin-right: 15px
+			content: ''
+			width: 24px
+			height: 24px
+			border: 1px solid #2E2E2E
+			box-sizing: border-box
+			border-radius: 8px
+		&::after
+			position: absolute
+			left: 7px
+			top: 6px
+			opacity: 0
+			transition: opacity .3s
+			content: ''
+			width: 8px
+			height: 6px
+			border-left: 2px solid
+			border-bottom: 2px solid
+			transform: rotate(-45deg)
+
+.custom-radio
+	display: none
+	&:checked
+		& + span::after
+			opacity: 1
+	& + span
+		position: relative
+		display: flex
+		align-items: center
+		&::before
+			margin-right: 15px
+			content: ''
+			width: 24px
+			height: 24px
+			border: 1px solid #2E2E2E
+			box-sizing: border-box
+			border-radius: 8px
+		&::after
+			position: absolute
+			left: 7px
+			top: 7px
+			opacity: 0
+			transition: opacity .3s
+			content: ''
+			width: 10px
+			height: 10px
+			background-color: currentColor
+			border-radius: 4px
+
+
+
