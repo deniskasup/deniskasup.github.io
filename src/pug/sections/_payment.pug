@@ -1,8 +1,8 @@
 section.payment
     .wrapper
         h1.title-1.payment__title Способы оплаты
-        .payment__list
-            .payment__item.fadeInUp(onclick="this.classList.toggle('active')")
+        .payment__list(data-dropdown)
+            .payment__item.fadeInUp
                 .payment__item-top
                     +svg('icon-card')
                     span Банковская карта
@@ -23,7 +23,7 @@ section.payment
                         img(src="./img/payment/payment3.png", alt="")
                         img(src="./img/payment/payment4.png", alt="")
                         img(src="./img/payment/payment5.png", alt="")
-            .payment__item.fadeInUp(onclick="this.classList.toggle('active')")
+            .payment__item.fadeInUp
                 .payment__item-top
                     +svg('icon-money')
                     span Наличные

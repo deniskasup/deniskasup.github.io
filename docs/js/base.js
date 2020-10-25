@@ -12174,6 +12174,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js-modules/header.js */ "./src/js/js-modules/header.js");
 /* harmony import */ var _js_modules_animation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js-modules/animation.js */ "./src/js/js-modules/animation.js");
 /* harmony import */ var _js_modules_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js-modules/tabs.js */ "./src/js/js-modules/tabs.js");
+/* harmony import */ var _js_modules_dropdown_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js-modules/dropdown.js */ "./src/js/js-modules/dropdown.js");
 var t0 = performance.now();
 
 __webpack_provided_window_dot_jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -12182,6 +12183,7 @@ window.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // PLUGINS============
 
 
  // MODULES======================================================================================
+
 
 
 
@@ -12204,6 +12206,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   Object(_js_modules_header_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
   Object(_js_modules_tabs_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
   Object(_js_modules_animation_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  Object(_js_modules_dropdown_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
 });
 var t1 = performance.now();
 console.log('Load index.js in', (t1 - t0).toFixed(4), 'milliseconds');
@@ -12248,6 +12251,33 @@ function initAnimations() {
     var animateObserver = new IntersectionObserver(observerCallback, observeParams);
     animateTargets.forEach(function (target) {
       animateObserver.observe(target);
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./src/js/js-modules/dropdown.js":
+/*!***************************************!*\
+  !*** ./src/js/js-modules/dropdown.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return initDropdown; });
+function initDropdown() {
+  var dropdownLists = document.querySelectorAll("[data-dropdown]");
+
+  if (dropdownLists) {
+    dropdownLists.forEach(function (list) {
+      var listItems = Array.from(list.children);
+      listItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          item.classList.toggle('active');
+        });
+      });
     });
   }
 }

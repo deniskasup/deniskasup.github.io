@@ -15,6 +15,7 @@ import './js-modules/sliders.js'
 import stickyHeader from './js-modules/header.js'
 import initAnimations from './js-modules/animation.js'
 import initTabs from './js-modules/tabs.js'
+import initDropdown from './js-modules/dropdown.js'
 
 
 // init ========================================================================================
@@ -37,6 +38,7 @@ $(() => {
 	stickyHeader()
 	initTabs()
     initAnimations()
+    initDropdown()
 })
 
 var t1 = performance.now();
