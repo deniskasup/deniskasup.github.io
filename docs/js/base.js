@@ -12349,19 +12349,21 @@ __webpack_require__.r(__webpack_exports__);
 function initListing() {
   var linesButton = document.querySelector(".listing__sort-grid svg:first-of-type");
   var gridButton = document.querySelector(".listing__sort-grid svg:last-of-type");
-  var products = document.querySelector('.listing__products-list');
+  var products = document.querySelector(".listing__products-list");
 
-  linesButton.onclick = function () {
-    linesButton.classList.add("active");
-    gridButton.classList.remove("active");
-    products.classList.remove('grid');
-  };
+  if (linesButton) {
+    linesButton.onclick = function () {
+      linesButton.classList.add("active");
+      gridButton.classList.remove("active");
+      products.classList.remove("grid");
+    };
 
-  gridButton.onclick = function () {
-    gridButton.classList.add("active");
-    linesButton.classList.remove("active");
-    products.classList.add('grid');
-  };
+    gridButton.onclick = function () {
+      gridButton.classList.add("active");
+      linesButton.classList.remove("active");
+      products.classList.add("grid");
+    };
+  }
 }
 
 /***/ }),
@@ -12431,6 +12433,17 @@ var bannerSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".banner .
     prevEl: ".banner .swiper-button-prev"
   }
 });
+var promoSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".promo .swiper-container", {
+  loop: true,
+  slidesPerView: "auto",
+  lazy: {
+    loadPrevNext: true
+  },
+  navigation: {
+    nextEl: ".promo .swiper-button-next",
+    prevEl: ".promo .swiper-button-prev"
+  }
+});
 var popularSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider .swiper-container", {
   loop: true,
   slidesPerView: "auto",
@@ -12442,6 +12455,21 @@ var popularSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product
     prevEl: ".product-slider .swiper-button-prev"
   }
 });
+
+if (window.matchMedia("(max-width: 1349px)").matches) {
+  var clinetsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".clients__list", {
+    loop: true,
+    slidesPerView: "auto",
+    lazy: {
+      loadPrevNext: true
+    },
+    navigation: {
+      nextEl: ".clients__list .swiper-button-next",
+      prevEl: ".clients__list .swiper-button-prev"
+    }
+  });
+}
+
 var listingSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".listing__tags", {
   slidesPerView: "auto",
   freeMode: true,

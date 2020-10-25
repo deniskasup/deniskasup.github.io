@@ -13,12 +13,16 @@ section.promo
                 .promo__top-card-text 
                     | Узнайте об 
                     span условиях доставки
-        .promo__bottom.fadeInUp
-            img(src="./img/promo-sale.png" alt="")
-            .promo__bottom-content
-                .promo__bottom-title.title-1 Покупай дешевле!
-                .promo__bottom-text Скидки на следующие категории товаров
-                a(href="#").yellow-btn Перейти к распродаже товаров
+        .promo__bottom.fadeInUp.swiper-container
+            .swiper-buttons
+                .swiper-button-prev
+                .swiper-button-next
+            .swiper-wrapper
+                .swiper-slide
+                    img(src="./img/promo-sale.png" alt="")
+                    .promo__bottom-content
+                        .promo__bottom-title.title-1 Покупай дешевле!
+                        .promo__bottom-text Скидки на следующие категории товаров
+                        a(href="#").yellow-btn Перейти к распродаже товаров
 
-        
 

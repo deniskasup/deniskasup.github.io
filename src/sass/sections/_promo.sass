@@ -2,11 +2,27 @@
     margin-bottom: 80px
     +until-tablet
         margin-bottom: 45px
+    & .swiper-container
+        width: 100%
+        &:hover
+            .swiper-buttons > *
+                visibility: visible
+                opacity: 1
+    & .swiper-buttons
+        & > *
+            opacity: 0
+            visibility: hidden
+            +until-desktop
+                opacity: 1
+                visibility: visible
     &__top
         width: 100%
         justify-content: space-between
         display: flex
         margin-bottom: 80px
+        +media-until(1140px)
+        flex-direction: column
+        margin-bottom: 50px
         +until-tablet
             margin-bottom: 30px
         &-card
@@ -17,6 +33,13 @@
             border-radius: 2px
             height: 130px
             position: relative
+            +media-until(1140px)
+            width: 100%
+            +until-tablet
+                padding: 0 20px
+                height: 80px
+                +media-until(374px)
+                padding: 0 15px
             &::after
                 position: absolute
                 border-radius: 2px
@@ -27,20 +50,36 @@
                 content: ''
                 width: 100%
                 height: 100%
+            &-img
+                +media-until(1140px)
+                height: 80%
 
             & img
+                object-fit: contain
                 position: relative
                 margin-right: 30px
                 top: 20px
+                +media-until(1140px)
+                margin-right: 10px
+                height: 100%
+                top: 0
+                +until-tablet
+                    max-width: 72px
             &-text
                 font-weight: bold
                 font-size: 24px
                 line-height: 130%
+                +until-tablet
+                    font-size: 18px
                 & span
                     font-size: 24px
                     line-height: 130%
                     border-bottom: 1px dotted
+                    +until-tablet
+                        font-size: 18px
             &:first-of-type
+                +media-until(1140px)
+                margin-bottom: 20px
                 &::after
                     background-color: #DBCDB5
                 &:hover::after
@@ -53,31 +92,47 @@
     &__bottom
         width: 100%
         position: relative
-        padding: 30px 50px
-        display: flex
-        justify-content: flex-end
-        align-items: center
+        & .swiper-slide
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            height: 300px
         &-content
+            position: absolute
+            right: 70px
+            width: 100%
             max-width: 350px
-            position: relative
             z-index: 1
             padding: 40px 25px
             display: flex
             flex-direction: column
             background: rgba(255, 255, 255, 0.9)
             border-radius: 2px
+            +until-desktop
+                right: 40px
+            +until-tablet
+                align-items: center
+                right: 50%
+                transform: translateX(50%)
+                +media-until(450px)
+                    max-width: 235px
+                    padding: 30px 18px
         &-title
             text-align: left
             margin-bottom: 5px
             font-family: Helvetica, sans-serif
+            +until-tablet
+                text-align: center
         &-text
             margin-bottom: 20px
+            text-align: center
         & .yellow-btn
             padding: 0 15px
+            +until-tablet
+                width: 100%
+                padding: 0 10px
+                text-align: center
         & img
-            top: 0
-            left: 0
-            position: absolute
             width: 100%
             height: 100%
             object-fit: cover

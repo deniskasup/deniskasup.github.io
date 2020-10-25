@@ -12,6 +12,18 @@ const bannerSwiper = new Swiper(".banner .swiper-container", {
         prevEl: ".banner .swiper-button-prev",
     },
 })
+const promoSwiper = new Swiper(".promo .swiper-container", {
+    loop: true,
+    slidesPerView: "auto",
+    lazy: {
+        loadPrevNext: true,
+    },
+    navigation: {
+        nextEl: ".promo .swiper-button-next",
+        prevEl: ".promo .swiper-button-prev",
+    },
+})
+
 const popularSwiper = new Swiper(".product-slider .swiper-container", {
     loop: true,
     slidesPerView: "auto",
@@ -24,10 +36,24 @@ const popularSwiper = new Swiper(".product-slider .swiper-container", {
     },
 })
 
+if (window.matchMedia("(max-width: 1349px)").matches) {
+    const clinetsSwiper = new Swiper(".clients__list", {
+        loop: true,
+        slidesPerView: "auto",
+        lazy: {
+            loadPrevNext: true,
+        },
+        navigation: {
+            nextEl: ".clients__list .swiper-button-next",
+            prevEl: ".clients__list .swiper-button-prev",
+        }
+    })
+}
+
 const listingSlider = new Swiper(".listing__tags", {
     slidesPerView: "auto",
     freeMode: true,
     scrollbar: {
         el: ".listing__tags .swiper-scrollbar",
-    }
+    },
 })

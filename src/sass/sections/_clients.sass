@@ -2,16 +2,33 @@
     margin-bottom: 80px
     +until-tablet
         margin-bottom: 45px
+    & .swiper-buttons
+        opacity: 0
+        visibility: hidden
+        +until-tablet
+            opacity: 1
+            visibility: visible
     &__list
         width: 100%
-        display: flex
-        flex-wrap: wrap
-        align-items: center
-        justify-content: space-around
+        +media-from(1350px)
+            overflow: initial
+        & .swiper-wrapper
+            +media-from(1350px)
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                justify-content: space-around
         &-img
+            width: max-content
+            +until-tablet
+                height: 100px
+            &:not(:last-of-type)
+                margin-right: 15px
             & img
+                width: 100%
+                height: 100%
+                object-fit: contain
                 filter: grayscale(1)
                 transition: filter .3s
-                margin-bottom: 10px
                 &:hover
                     filter: grayscale(0)

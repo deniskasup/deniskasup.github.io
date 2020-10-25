@@ -9,7 +9,11 @@
         grid-gap: 30px 50px
         margin-bottom: 70px
         +until-desktop
+            grid-gap: 30px
             margin-bottom: 40px
+        +until-tablet
+            grid-gap: 20px
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr))
     &__card
         position: relative
         overflow: hidden
@@ -32,8 +36,14 @@
             position: absolute
             background: rgba(255, 255, 255, 0.8)
             border-radius: 0px 0px 2px 2px
+            +until-tablet
+                height: 50px
             & span
                 text-transform: uppercase
                 padding-bottom: 3px
                 border-bottom: 1px dashed #3C3C3B
                 text-align: center
+                +until-tablet
+                    border-bottom: 0
+                    font-size: 12px
+                    font-weight: bold

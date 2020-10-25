@@ -10,6 +10,7 @@ body
 	font-size: 0.875rem
 	width: 100%
 	display: flex
+	align-items: flex-start
 	& *
 		box-sizing: border-box
 	&.fancybox-active
@@ -44,8 +45,10 @@ ul, ol, h1, h2, h3, h4, a
 	display: flex
 	flex-direction: column
 	position: relative
-	width: 100%
+	width: calc( 100% - 242px )
 	height: 100%
+	+until-desktop
+		width: 100%
 .wrapper
 	width: 100%
 	max-width: 1132px
@@ -164,6 +167,8 @@ span
 	line-height: 120%
 	margin-bottom: 20px
 	max-width: 800px
+	+media-until(450px)
+		font-size: 24px
 
 .title-2
 	font-size: 24px

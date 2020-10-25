@@ -1,23 +1,43 @@
 .footer
     border-top: 1px solid #EAEAEA
-    padding-bottom: 80px
+    padding-bottom: 60px
     padding-top: 20px
+    +media-until(850px)
+        padding-bottom: 20px
     & .wrapper
         flex-direction: row
         align-items: flex-start
         justify-content: space-between
+        +media-until(850px)
+            flex-wrap: wrap
+        +until-tablet
+            flex-direction: column
+            align-items: center
+
         & > *
             display: flex
+            +media-until(850px)
+                width: 100%
+                max-width: 270px
+                
     &__left
         flex-direction: column
         align-items: center
         max-width: 210px
+        +media-until(850px)
+            width: 100%
+            max-width: unset !important
+            margin-bottom: 20px
+        +until-tablet
+            max-width: 270px !important
     &__right
         flex-direction: column
     &__social
         margin-bottom: 15px
         display: flex
         flex-direction: column
+        +until-tablet
+            align-items: center
         & > span
             display: block
             font-weight: bold
@@ -32,12 +52,16 @@
                 transition: fill .3s
                 &:hover
                     fill: #575756
-            & a 
+            & a
                 display: block
                 &:not(:last-of-type)
-                    margin-right: 10px 
+                    margin-right: 10px
     &__payment
         margin-bottom: 20px
+        +until-tablet
+            display: flex
+            flex-direction: column
+            align-items: center
         & > span
             display: block
             font-weight: bold
@@ -53,6 +77,8 @@
         border-bottom: 1px dashed
         width: max-content
         transition: border-bottom-color .3s
+        +until-tablet
+            margin: 0 auto
         &:hover
             border-bottom-color: transparent
 
@@ -61,12 +87,17 @@
         max-width: 135px
         height: 88px
         margin-bottom: 25px
+        +media-until(850px)
+            width: 100%
+            max-width: unset
         & svg
             width: 100%
             height: 100%
     &__about
         text-align: center
     &__nav
+        +media-until(850px)
+            margin-bottom: 30px
         &-block
             flex-shrink: 0
             display: flex
@@ -85,4 +116,3 @@
                 border-bottom-color: transparent
             &:not(:last-of-type)
                 margin-bottom: 10px
-            
