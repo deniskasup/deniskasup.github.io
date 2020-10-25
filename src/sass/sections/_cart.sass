@@ -44,8 +44,14 @@
 	&__list
 		border-collapse: collapse
 		width: 100%
-		// border-spacing: 0 20px
+		+media-until(1200px)
+			width: 100%
+			display: flex
+			flex-direction: column
+
 		&-header
+			+media-until(1200px)
+				display: none
 			& th
 				text-align: left
 				font-weight: bold
@@ -53,26 +59,63 @@
 				line-height: 120%
 				color: #B1B2B3
 				padding: 10px
+		&-items
+			+media-until(1200px)
+				width: 100%
+				display: grid
+				grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
+				grid-gap: 10px
 	&__item
 		width: 100%
-		// display: flex
-		// justify-content: space-between
-		// align-items: center
 		background-color: #fff
 		padding: 17px
 		border: 1px solid #EAEAEA
 		border-radius: 5px
+		+media-until(1200px)
+			flex-wrap: wrap
+			padding: 7px
+			display: flex
+			max-width: 350px
+			margin: 0 auto
+		&-quantity
+			+media-until(1200px)
+				order: 2
 		&:not(:last-of-type)
 			margin-bottom: 20px
+			+media-until(1200px)
+				margin-bottom: 0
+			
 		& td
 			padding: 10px
+			&:last-of-type
+				+media-until(1200px)
+					display: flex
+					align-items: center
+					order: 3
+					padding: 0
+				&::after
+					+media-until(1200px)
+						content: 'Удалить из корзины'
+						margin-left: 5px
+						max-width: 65px
+						display: block
+						font-size: 12px
 		&-product
+			+media-until(1200px)
+				order: 0
 			& > div
 				display: flex
 				align-items: center
+				+media-until(1200px)
+					align-items: flex-start
+					flex-direction: column
 			&-img
 				margin-right: 24px
 				max-width: 170px
+				+media-until(1200px)
+					margin-right: 0
+					margin-bottom: 10px
+					max-width: unset
 				& img
 					width: 100%
 					height: auto
@@ -96,9 +139,14 @@
 		&-price
 			font-weight: bold
 			font-size: 24px
+			+media-until(1200px)
+				display: none
 		&-total-price
 			font-weight: bold
 			font-size: 24px
+			+media-until(1200px)
+				width: 100%
+				order: 1
 		&-delete
 			border-radius: 50%
 			background-color: $red
@@ -109,6 +157,11 @@
 			justify-content: center
 			cursor: pointer
 			transition: background-color .3s
+			+media-until(1200px)
+				width: 25px
+				height: 25px
+			
+			
 			&:hover
 				background-color: #ca0202
 			& svg
@@ -124,6 +177,9 @@
 		padding: 16px
 		margin-bottom: 40px
 		position: relative
+		+media-until(1200px)
+			justify-content: flex-start
+			margin-right: 0
 		&::after
 			content: ''
 			position: absolute
@@ -139,6 +195,7 @@
 			align-items: flex-start
 			flex-direction: column
 			margin-right: 130px
+
 		&-print
 			cursor: pointer
 			padding-bottom: 3px
@@ -170,6 +227,17 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
+		+media-until(1200px)
+			justify-content: space-around
+		& > *
+			margin-bottom: 20px
+			+media-until(1200px)
+				text-align: center
+				padding: 0 15px
+			+media-until(400px)
+				width: 100%
+			
 
 .quantity-block
 	display: flex
@@ -187,6 +255,9 @@
 		justify-content: center
 		appearance: none
 		width: 85px
+		+media-until(450px)
+			width: 60px
+			font-size: 20px
 	& button
 		height: 50px
 		display: flex

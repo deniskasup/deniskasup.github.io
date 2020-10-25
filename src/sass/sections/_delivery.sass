@@ -12,10 +12,26 @@
 		background-size: auto
 		border: 0.3px solid #3C3C3B
 		margin-bottom: 35px
+		+until-tablet
+			background: url(../img/delivery-banner.png) no-repeat bottom, linear-gradient(68.19deg, #15796D 12.07%, #52BC6A 104.57%)
+			background-size: 80%, 100% 
+			padding: 10px
+			border: none	
+		+media-until(500px)
+			background-size: 120%, 100%
 		&-content
 			border: 0.3px solid rgba(255, 255, 255, 0.2)
 			border-radius: 1px
 			padding: 70px 60px
+			+until-tablet
+				padding: 30px
+				padding-bottom: 300px
+				display: flex
+				flex-direction: column
+				align-items: center
+			+media-until(500px)
+				padding: 20px
+				padding-bottom: 250px
 		&-text
 			max-width: 550px
 			color: white
@@ -23,13 +39,28 @@
 			font-weight: bold
 			font-size: 50px
 			line-height: 120%
+			text-shadow: 0 0 3px black
+			+until-tablet
+				text-align: center
+				font-size: 36px
+			+media-until(500px)
+				text-shadow: none
 	&__info
 		display: flex
 		align-items: flex-start
+		+until-tablet
+			width: 100%
+			flex-direction: column
+			align-items: center
 		&-item
 			margin-right: 25px
 			display: flex
 			align-items: flex-end
+			+until-tablet
+				flex-direction: column
+				align-items: center
+				margin-bottom: 20px
+				margin-right: 0
 			& span
 				font-weight: bold
 				font-size: 48px
@@ -39,3 +70,5 @@
 				font-size: 18px
 				margin-left: 10px
 				line-height: 30px
+				+until-tablet
+					margin-left: 0

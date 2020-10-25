@@ -12,6 +12,8 @@
         width: calc(100% - 270px)
         display: flex
         flex-direction: column
+        +media-until(1200px)
+            width: 100%
         &-list
             width: 100%
             display: grid
@@ -23,6 +25,8 @@
                     display: flex
                     flex-direction: column
                     &-left
+                        width: 100%
+                        
                         grid-template-columns: 1fr 1fr 1fr
                     &-right
                         margin-left: 0
@@ -35,6 +39,7 @@
                         order: 0
                     &-rate
                         order: 1
+                        margin-right: 0
                         grid-column: span 1
                     &-photo
                         width: 100%
@@ -133,6 +138,7 @@
                     &:hover
                         border-bottom-color: transparent
             &-rate
+                width: max-content
                 order: 4
                 display: flex
                 align-items: center
@@ -160,3 +166,48 @@
                 align-self: center
                 color: #B1B2B3
                 font-weight: bold
+
+@media(max-width: 767px) 
+    .listing__products-list
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+        grid-gap: 30px 17px
+        .listing__products-item
+            display: flex
+            flex-direction: column
+            &-left
+                width: 100%
+                
+                grid-template-columns: 1fr 1fr 1fr
+            &-right
+                margin-left: 0
+                margin-top: auto
+                width: 100%
+                align-items: flex-start
+            &-price
+            &-button
+                width: 100%
+            &-avail
+                order: 4
+                margin-bottom: 5px
+                grid-column: span 2
+            &-rate
+                margin-left: auto
+                margin-right: 0
+                order: 2
+                grid-column: span 1
+                margin-bottom: 10px
+            &-photo
+                width: 100%
+                height: 144px
+                margin: 5px 0 10px
+                max-width: unset
+                order: 0
+                grid-column: span 3
+            &-art
+                order: 1
+                grid-column: span 2
+                margin-bottom: 10px
+            &-title
+                margin-bottom: 20px
+                order: 3
+                grid-column: span 3

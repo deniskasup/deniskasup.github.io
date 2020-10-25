@@ -51,10 +51,18 @@ section.listing
                         .listing__sort-item.min по цене
                         .listing__sort-item.max по популярности
                         .listing__sort-item по алфавиту
+                    .listing__sort-select-container  
+                        span Сортировать: 
+                        .listing__sort-select  
+                            select(name="sort")
+                                option(value="1") по цене ↑
+                                option(value="2") по цене ↓
+                                option(value="3") по популярности
+                                option(value="4") по алфавиту
                     .listing__sort-grid
                         +svg('icon-lines')
                         +svg('icon-grid')
-                .listing__products-list.grid
+                .listing__products-list
                     .listing__products-item
                         .listing__products-item-left
                             .listing__products-item-photo

@@ -6,10 +6,43 @@
     &-list
         display: flex
         align-items: center
+        +until-tablet
+            display: none
         & span
             color: #B1B2B3
             font-size: 12px
             margin-right: 40px
+    &-select
+        position: relative
+        display: flex
+        align-items: center
+        background: #FFFFFF
+        border: 1px solid #EAEAEA
+        height: 37px
+        border-radius: 2px
+        padding: 0 10px
+        &-container
+            display: flex
+            flex-direction: column
+            & span
+                color: #B1B2B3
+                font-size: 12px
+                margin-bottom: 10px
+        +from-tablet
+            display: none
+        &::after
+            flex-shrink: 0
+            margin-top: -4px
+            content: ''
+            width: 8px
+            height: 8px
+            border-left: 1px solid
+            border-bottom: 1px solid
+            margin-left: 10px
+            transform: rotate(-45deg)
+        & select
+            appearance: none
+            border: none
     &-item
         font-size: 12px
         cursor: pointer
@@ -31,6 +64,8 @@
     &-grid
         display: flex
         align-items: center
+        +until-tablet
+            display: none
         & svg
             width: 15px
             height: 15px
