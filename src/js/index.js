@@ -1,45 +1,47 @@
-var t0 = performance.now();
+var t0 = performance.now()
 
-import $ from "jquery";
+import $ from "jquery"
 window.jQuery = $
 window.$ = $
 
 // PLUGINS======================================================================================
-import Inputmask from 'inputmask'
+import Inputmask from "inputmask"
 import LazyLoad from "vanilla-lazyload"
-
-import '@fancyapps/fancybox'
+import "@fancyapps/fancybox"
 
 // MODULES======================================================================================
-import './js-modules/sliders.js'
-import stickyHeader from './js-modules/header.js'
-import initAnimations from './js-modules/animation.js'
-import initTabs from './js-modules/tabs.js'
-import initDropdown from './js-modules/dropdown.js'
-
+import "./js-modules/sliders.js"
+import stickyHeader from "./js-modules/header.js"
+import initAnimations from "./js-modules/animation.js"
+import initTabs from "./js-modules/tabs.js"
+import initDropdown from "./js-modules/dropdown.js"
+import initRange from "./js-modules/range.js"
+import initListing from "./js-modules/listing-grid.js"
 
 // init ========================================================================================
 $(() => {
 
-    document.querySelectorAll('.burger').forEach(burger => {
-            burger.addEventListener('click', () => {
-                burger.classList.toggle('active')
-            })
+    document.querySelectorAll(".burger").forEach((burger) => {
+        burger.addEventListener("click", () => {
+            burger.classList.toggle("active")
         })
+    })
 
-    var lazyLoadInstance = new LazyLoad();
+    var lazyLoadInstance = new LazyLoad()
     let im = new Inputmask("+7 (999) 999-99-99")
     im.mask(document.querySelectorAll('input[name="PHONE"]'))
-        // $('[data-fancybox]').fancybox({
-        // 	smallBtn: true,
-        // })
+    // $('[data-fancybox]').fancybox({
+    // 	smallBtn: true,
+    // })
 
     // CUSTOM FUNCTIONS
-	stickyHeader()
-	initTabs()
+    stickyHeader()
+    initTabs()
     initAnimations()
     initDropdown()
+    initRange()
+    initListing()
 })
 
-var t1 = performance.now();
-console.log('Load index.js in', (t1 - t0).toFixed(4), 'milliseconds');
+var t1 = performance.now()
+console.log("Load index.js in", (t1 - t0).toFixed(4), "milliseconds")

@@ -1,0 +1,183 @@
+section.listing
+    .wrapper
+        h1.title-1 Продажа газобетонных блоков H+H в самом лучшем городе СПБ
+        .listing__content
+            //- FILTER
+            include ../blocks/listing/_listing-filter.pug
+
+            .listing__products
+                .listing__tags.swiper-container
+                    .swiper-wrapper
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный товарный бетон
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                        a(href="#").listing__tags-item.swiper-slide
+                            .listing__tags-item-img
+                                img(src="/img/beton/beton1.png" alt="") 
+                            .listing__tags-item-title Бетон товарный
+                    .swiper-scrollbar
+                .listing__sort
+                    .listing__sort-list
+                        span Сортировать: 
+                        .listing__sort-item.min по цене
+                        .listing__sort-item.max по популярности
+                        .listing__sort-item по алфавиту
+                    .listing__sort-grid
+                        +svg('icon-lines')
+                        +svg('icon-grid')
+                .listing__products-list.grid
+                    .listing__products-item
+                        .listing__products-item-left
+                            .listing__products-item-photo
+                                img(src="./img/beton/beton1.png" alt="")
+                            .listing__products-item-title
+                                a(href="#") Бетон товарный
+
+                            .listing__products-item-avail
+                                +svg('icon-available')
+                                | В наличии
+                            .listing__products-item-rate.two
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                            .listing__products-item-art Арт. 998393
+                        .listing__products-item-right
+                            .listing__products-item-price 3 000 руб.
+                            .listing__products-item-button.yellow-btn В корзину
+
+                    .listing__products-item
+                        .listing__products-item-left
+                            .listing__products-item-photo
+                                img(src="./img/not-exist.png" alt="")
+                            .listing__products-item-title
+                                a(href="#") Бетон товарный
+
+                            .listing__products-item-avail
+                                +svg('icon-available')
+                                | В наличии
+                            .listing__products-item-rate.two
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                            .listing__products-item-art Арт. 998393
+                        .listing__products-item-right
+                            .listing__products-item-price 3 000 руб.
+                            .listing__products-item-button.yellow-btn.added В корзину
+
+                    .listing__products-item
+                        .listing__products-item-left
+                            .listing__products-item-photo
+                                img(src="./img/beton/beton1.png" alt="")
+                            .listing__products-item-title
+                                a(href="#") Бетон товарный
+
+                            .listing__products-item-avail
+                                +svg('icon-available')
+                                | В наличии
+                            .listing__products-item-rate.two
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                            .listing__products-item-art Арт. 998393
+                        .listing__products-item-right
+                            .listing__products-item-price 3 000 руб.
+                            .listing__products-item-button.yellow-btn В корзину
+
+                    .listing__products-item
+                        .listing__products-item-left
+                            .listing__products-item-photo
+                                img(src="./img/beton/beton1.png" alt="")
+                            .listing__products-item-title
+                                a(href="#") Бетон товарный
+
+                            .listing__products-item-avail
+                                +svg('icon-available')
+                                | В наличии
+                            .listing__products-item-rate.two
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                            .listing__products-item-art Арт. 998393
+                        .listing__products-item-right
+                            .listing__products-item-price 3 000 руб.
+                            .listing__products-item-button.yellow-btn В корзину
+
+                    .listing__products-item
+                        .listing__products-item-left
+                            .listing__products-item-photo
+                                img(src="./img/beton/beton1.png" alt="")
+                            .listing__products-item-title
+                                a(href="#") Бетон товарный
+
+                            .listing__products-item-avail
+                                +svg('icon-available')
+                                | В наличии
+                            .listing__products-item-rate.two
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                            .listing__products-item-art Арт. 998393
+                        .listing__products-item-right
+                            .listing__products-item-price 3 000 руб.
+                            .listing__products-item-button.yellow-btn В корзину
+
+                    .listing__products-item
+                        .listing__products-item-left
+                            .listing__products-item-photo
+                                img(src="./img/beton/beton1.png" alt="")
+                            .listing__products-item-title
+                                a(href="#") Бетон товарный
+
+                            .listing__products-item-avail
+                                +svg('icon-available')
+                                | В наличии
+                            .listing__products-item-rate.two
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                                +svg('icon-star')
+                            .listing__products-item-art Арт. 998393
+                        .listing__products-item-right
+                            .listing__products-item-price 3 000 руб.
+                            .listing__products-item-button.yellow-btn В корзину
+

@@ -68,6 +68,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "jquery": "^3.5.1",
+    "nouislider": "^14.6.2",
     "selectize": "^0.12.6",
     "swiper": "^6.0.4"
   }

@@ -1,0 +1,43 @@
+.listing__sort
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 10px
+    &-list
+        display: flex
+        align-items: center
+        & span
+            color: #B1B2B3
+            font-size: 12px
+            margin-right: 40px
+    &-item
+        font-size: 12px
+        cursor: pointer
+        display: flex
+        align-items: center
+        &::after
+            margin-top: 5px
+            margin-left: 5px
+            content: ''
+            border: 4px solid transparent
+        &.min::after
+            border-top: 4px solid
+        &.max::after
+            margin-top: -4px
+            border-bottom: 4px solid
+
+        &:not(:last-of-type)
+            margin-right: 45px
+    &-grid
+        display: flex
+        align-items: center
+        & svg
+            width: 15px
+            height: 15px
+            fill: #EAEAEA
+            stroke: #EAEAEA
+            &:not(:last-of-type)
+                margin-right: 5px
+            &.active
+                fill: $orange
+                stroke: $orange
