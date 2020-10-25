@@ -21,8 +21,7 @@ import initMobileMenu from "./js-modules/mobilemenu.js"
 
 // init ========================================================================================
 $(() => {
-    
-    if( window.matchMedia('(max-width: 1024px)').matches ) {
+    if (window.matchMedia("(max-width: 1024px)").matches) {
         initMobileMenu()
     }
 
@@ -35,9 +34,7 @@ $(() => {
     var lazyLoadInstance = new LazyLoad()
     let im = new Inputmask("+7 (999) 999-99-99")
     im.mask(document.querySelectorAll('input[name="PHONE"]'))
-    // $('[data-fancybox]').fancybox({
-    // 	smallBtn: true,
-    // })
+
 
     // CUSTOM FUNCTIONS
     stickyHeader()

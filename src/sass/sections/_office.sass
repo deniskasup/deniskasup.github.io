@@ -2,8 +2,31 @@
     margin-bottom: 80px
     +until-tablet
         margin-bottom: 45px
+    & .wrapper
+        +media-until(380px)
+            padding: 0
+    & .swiper-buttons
+        opacity: 0
+        visibility: hidden
+        +media-until(1200px)
+            opacity: 1
+            visibility: visible
     &__cards
         width: 100%
-        display: grid
-        grid-template-columns: repeat(auto-fill, minmax(285px,1fr))
-        grid-gap: 30px
+        & .swiper-wrapper
+            +media-from(1200px)
+                width: 100%
+                display: grid
+                grid-template-columns: repeat(auto-fill, minmax(285px,1fr))
+                grid-gap: 30px
+
+    &__card
+        width: 100%
+        max-width: 320px
+        +media-until(1200px)
+            margin-right: 20px
+        +media-until(380px)
+            width: 100vw
+            max-width: unset
+        & img
+            width: 100%

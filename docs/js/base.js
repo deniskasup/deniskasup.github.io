@@ -12197,7 +12197,7 @@ window.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // PLUGINS============
  // init ========================================================================================
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  if (window.matchMedia('(max-width: 1024px)').matches) {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
     Object(_js_modules_mobilemenu_js__WEBPACK_IMPORTED_MODULE_11__["default"])();
   }
 
@@ -12208,10 +12208,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   var lazyLoadInstance = new vanilla_lazyload__WEBPACK_IMPORTED_MODULE_2___default.a();
   var im = new inputmask__WEBPACK_IMPORTED_MODULE_1___default.a("+7 (999) 999-99-99");
-  im.mask(document.querySelectorAll('input[name="PHONE"]')); // $('[data-fancybox]').fancybox({
-  // 	smallBtn: true,
-  // })
-  // CUSTOM FUNCTIONS
+  im.mask(document.querySelectorAll('input[name="PHONE"]')); // CUSTOM FUNCTIONS
 
   Object(_js_modules_header_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
   Object(_js_modules_tabs_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
@@ -12317,26 +12314,26 @@ function initDropdown() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return stickyHeader; });
 function stickyHeader() {
-  var point = document.querySelector('header');
-  var header = document.querySelector('.header-sticky');
+  var point = document.querySelector("header");
+  var header = document.querySelector(".header-sticky");
   var config = {
-    rootMargin: '0px',
-    threshold: 1.0
+    rootMargin: "0px",
+    threshold: 0.8
   };
 
-  var observerCallback = function observerCallback(entries, observer) {
+  var observerCallback2 = function observerCallback2(entries, observer) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        header.classList.remove('sticky');
+        header.classList.remove("sticky");
       } else {
         if (entry.rootBounds.y >= entry.boundingClientRect.y) {
-          header.classList.add('sticky');
+          header.classList.add("sticky");
         }
       }
     });
   };
 
-  var headerObserver = new IntersectionObserver(observerCallback, config);
+  var headerObserver = new IntersectionObserver(observerCallback2, config);
   headerObserver.observe(point);
 }
 
@@ -12539,6 +12536,20 @@ var listingSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".listing
     el: ".listing__tags .swiper-scrollbar"
   }
 });
+
+if (window.matchMedia("(max-width: 1200px)").matches) {
+  var officeSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".office__cards", {
+    loop: true,
+    slidesPerView: "auto",
+    lazy: {
+      loadPrevNext: true
+    },
+    navigation: {
+      nextEl: ".office__cards .swiper-button-next",
+      prevEl: ".office__cards .swiper-button-prev"
+    }
+  });
+}
 
 /***/ }),
 

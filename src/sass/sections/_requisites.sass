@@ -9,9 +9,13 @@
         flex-wrap: wrap
         justify-content: space-between
         max-height: 230px
+        +until-tablet
+            max-height: unset
     &__item
         margin-bottom: 20px
         display: flex
+        +until-tablet
+            flex-direction: column
         &-key
             width: 100%
             max-width: 245px
@@ -19,6 +23,8 @@
             align-items: flex-start
             font-size: 14px
             line-height: 120%
+            +until-tablet
+                margin-bottom: 5px
             & span
                 flex-shrink: 0
             &::after
@@ -27,9 +33,13 @@
                 content: ''
                 width: 100%
                 border-bottom: 1px dotted $black
+                +until-tablet
+                    display: none
         &-value
             display: inline-table
             width: auto
             max-width: 330px
             font-weight: bold
             line-height: 120%
+            +until-tablet
+                max-width: unset

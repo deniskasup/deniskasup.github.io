@@ -46,7 +46,7 @@ if (window.matchMedia("(max-width: 1349px)").matches) {
         navigation: {
             nextEl: ".clients__list .swiper-button-next",
             prevEl: ".clients__list .swiper-button-prev",
-        }
+        },
     })
 }
 
@@ -57,3 +57,17 @@ const listingSlider = new Swiper(".listing__tags", {
         el: ".listing__tags .swiper-scrollbar",
     },
 })
+
+if (window.matchMedia("(max-width: 1200px)").matches) {
+    const officeSlider = new Swiper(".office__cards", {
+        loop: true,
+        slidesPerView: "auto",
+        lazy: {
+            loadPrevNext: true,
+        },
+        navigation: {
+            nextEl: ".office__cards .swiper-button-next",
+            prevEl: ".office__cards .swiper-button-prev",
+        },
+    })
+}

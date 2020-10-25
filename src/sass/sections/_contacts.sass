@@ -6,9 +6,16 @@
         align-items: flex-start
         justify-content: space-between
         flex-direction: row
+        +until-tablet
+            align-items: center
+            flex-direction: column
     &__map
         width: 100%
         max-width: 460px
+        +until-tablet
+            width: 100vw
+            height: 300px
+            max-width: unset
     &__title
         text-align: left
 
@@ -18,13 +25,26 @@
         margin-right: 50px
         display: flex
         flex-direction: column
+        +media-until(900px)
+            margin-right: 25px
+        +until-tablet
+            align-items: center
+            margin-right: 0
+            margin-bottom: 30px
         &-bottom
             display: flex
+            +until-tablet
+                flex-direction: column
+                align-items: center
     &__list
         margin-bottom: 25px
     &__item
         margin-bottom: 20px
         display: flex
+        +until-tablet
+            flex-direction: column
+            align-items: center
+            margin-bottom: 15px
         &-key
             width: 100%
             max-width: 245px
@@ -32,6 +52,9 @@
             align-items: flex-start
             font-size: 14px
             line-height: 120%
+            +until-tablet
+                width: max-content
+                margin-bottom: 5px
             & span
                 flex-shrink: 0
             &::after
@@ -40,9 +63,12 @@
                 content: ''
                 width: 100%
                 border-bottom: 1px dotted $black
+                +until-tablet
+                    display: none
         &-value
             display: inline-table
             width: auto
+            flex-shrink: 0
             max-width: 330px
             font-weight: bold
             line-height: 120%
@@ -50,6 +76,10 @@
         margin-right: 20px
         display: flex
         flex-direction: column
+        +until-tablet
+            margin-right: 0
+            margin-bottom: 20px
+            
         &-title
             margin-bottom: 5px
             font-weight: bold
@@ -61,6 +91,9 @@
             display: block
             width: 20px
             height: 20px
+            +until-tablet
+                width: 30px
+                height: 30px
             &:not(:last-of-type)
                 margin-right: 10px
             &:hover svg

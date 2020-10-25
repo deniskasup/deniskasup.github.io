@@ -1,13 +1,17 @@
 section.office
     .wrapper
         h1.title-1.office__title Наш оффис
-        .office__cards
-            .office__card.fadeInUp
-                a(href="./img/office/office1.jpg" data-fancybox)
-                    img(src="./img/office/office1.jpg", alt="")
-            .office__card.fadeInUp
-                a(href="./img/office/office2.jpg" data-fancybox)
-                    img(src="./img/office/office2.jpg", alt="")
-            .office__card.fadeInUp
-                a(href="./img/office/office3.jpg" data-fancybox)
-                    img(src="./img/office/office3.jpg", alt="")
+        .office__cards.swiper-container
+            .swiper-buttons
+                .swiper-button-prev
+                .swiper-button-next
+            .swiper-wrapper
+                .office__card.fadeInUp.swiper-slide
+                    a(href="./img/office/office1.jpg" data-fancybox)
+                        img(src="./img/office/office1.jpg", alt="")
+                .office__card.fadeInUp.swiper-slide
+                    a(href="./img/office/office2.jpg" data-fancybox)
+                        img(src="./img/office/office2.jpg", alt="")
+                .office__card.fadeInUp.swiper-slide
+                    a(href="./img/office/office3.jpg" data-fancybox)
+                        img(src="./img/office/office3.jpg", alt="")
