@@ -17,9 +17,14 @@ import initTabs from "./js-modules/tabs.js"
 import initDropdown from "./js-modules/dropdown.js"
 import initRange from "./js-modules/range.js"
 import initListing from "./js-modules/listing-grid.js"
+import initMobileMenu from "./js-modules/mobilemenu.js"
 
 // init ========================================================================================
 $(() => {
+    
+    if( window.matchMedia('(max-width: 1024px)').matches ) {
+        initMobileMenu()
+    }
 
     document.querySelectorAll(".burger").forEach((burger) => {
         burger.addEventListener("click", () => {

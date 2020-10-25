@@ -1,0 +1,32 @@
+.mobile-header
+    .mobile-header__phone
+        +svg('icon-phone','0 0 17 17','17','17')
+        a(href="tel:+7 (812) 602-60-82") +7 (812) 602-60-82
+    .mobile-header__city
+        +svg('icon-place')
+        .mobile-header__city-select
+            select(name="city")
+                option(value="1") Санкт-Петербург
+                option(value="1") Челябинск
+                option(value="1") Челябинск
+                option(value="1") Челябинск
+                option(value="1") Челябинск
+                option(value="1") Челябинск
+            
+.mobile-sticky-header
+    a(href="./").mobile-sticky-header__logo
+        +svg('logo-full')
+    .mobile-sticky-header__about Комплексная поставка строительных материалов
+    .mobile-sticky-header__burger
+        .burger.js-burger
+            span
+            span
+            span
+
+    a(href="./cart.html").mobile-sticky-header__cart
+        .mobile-sticky-header__cart-items
+            span 3
+        +svg('icon-cart')
+        
+    //- MOBILE MENU
+    include ../sections/_mobilemenu.pug
