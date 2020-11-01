@@ -12316,6 +12316,7 @@ __webpack_require__.r(__webpack_exports__);
 function stickyHeader() {
   var point = document.querySelector("header");
   var header = document.querySelector(".header-sticky");
+  var scrollButton = document.querySelector('.scroll-top');
   var config = {
     rootMargin: "0px",
     threshold: 0.8
@@ -12325,9 +12326,11 @@ function stickyHeader() {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         header.classList.remove("sticky");
+        scrollButton.classList.remove("active");
       } else {
         if (entry.rootBounds.y >= entry.boundingClientRect.y) {
           header.classList.add("sticky");
+          scrollButton.classList.add("active");
         }
       }
     });
@@ -12533,6 +12536,7 @@ var listingSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".listing
   slidesPerView: "auto",
   freeMode: true,
   scrollbar: {
+    draggable: true,
     el: ".listing__tags .swiper-scrollbar"
   }
 });

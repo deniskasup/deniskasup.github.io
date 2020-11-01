@@ -1,0 +1,51 @@
+doctype html
+html(lang="ru")
+
+    //- HEAD
+    include ../base/_head.pug
+
+    body#body
+        //- MIXINS
+        include ../base/_mixins.pug
+        //- SVG-SPRITE
+        include ../base/_svg-sprite.pug
+
+        //- SIDEBAR
+        include ../blocks/_sidebar.pug
+
+        //- MOBILE_HEADER
+        include ../sections/_mobile-header.pug
+
+        //- ОСНОВАНЯ ОБЕРТКА
+        .wrap
+            //- HEADER-sticky
+            include ../sections/_header-sticky.pug
+
+            //- /HEADER
+            include ../sections/_header.pug
+
+            //- CART
+            section.cart
+                .wrapper
+                    .cart__title-block
+                        h1.title-1.cart__title Корзина
+                        
+                    //- ПУСТАЯ КОРЗИНА
+                    .cart__empty
+                        span Корзина пока пуста
+                        a(href="#").yellow-btn  Вернуться к покупкам	
+
+
+
+            //- MAP 
+            include ../sections/_map.pug
+
+
+            //- FOOTER
+            include ../sections/_footer.pug
+
+
+            //- POPUPS
+            include ../blocks/forms/_callback.pug
+
+    include ../base/_scripts.pug

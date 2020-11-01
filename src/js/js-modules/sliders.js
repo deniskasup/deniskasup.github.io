@@ -54,6 +54,7 @@ const listingSlider = new Swiper(".listing__tags", {
     slidesPerView: "auto",
     freeMode: true,
     scrollbar: {
+        draggable: true,
         el: ".listing__tags .swiper-scrollbar",
     },
 })

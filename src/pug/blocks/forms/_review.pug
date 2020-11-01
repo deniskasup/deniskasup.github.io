@@ -1,0 +1,27 @@
+.popup#review
+    .popup__form.form
+        h2.title-2.form__title Оставить отзыв
+        .form__stars
+            span Оцените товар
+            .form__stars-items(data-rating)
+                +svg('icon-star')
+                +svg('icon-star')
+                +svg('icon-star')
+                +svg('icon-star')
+                +svg('icon-star')
+        .form__inputs
+            label
+                span Оставьте свой комментарий
+                textarea(name="", rows="4" placeholder="Что Вам понравилось в этом товаре? Кому бы Вы его рекомендовали?")
+                .form__error
+            label
+                input(type="text" placeholder="Укажите Ваше имя")
+                .form__error
+        .form__button.yellow-btn ОТПРАВИТЬ
+        label.form__checkbox
+            input#callback-policy(type="checkbox" name="CHECK")
+            span
+                span 
+                    | Нажимая кнопку «Перезвоните мне», Вы потверждаете, что ознакомились с 
+                    a(href="#") Условиями обработки персональных данных 
+                    | и принимаете их

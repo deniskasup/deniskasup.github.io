@@ -39,14 +39,22 @@
 				margin-right: 11px
 		&-stars
 			display: flex
+			flex-direction: row-reverse
 			align-items: center
 			margin-right: 10px
 			fill: #B1B2B3
+			transition: fill .3s
+			& > svg
+				&:hover
+					fill: $orange
+					& ~ svg
+						fill: $orange
+
 			& svg
 				width: 11px
 				height: 11px
 				&:not(:last-of-type)
-					margin-right: 4px
+					margin-left: 4px
 	&__list
 		width: 100%
 		display: flex

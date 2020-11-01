@@ -80,9 +80,13 @@
         margin-left: 30px
         display: flex
         align-items: flex-start
+        cursor: pointer
+        &:hover .header__cart-button
+            background-color: #EBAF00
         & span
             font-weight: bold
         &-button
+            transition: background-color .3s
             margin-right: 15px
             background: $orange
             width: 32px
@@ -156,10 +160,14 @@
             align-items: center
             position: relative
             padding-right: 2px
+            & > a
+                transition: color .3s
             &:hover
-                & > a::after
-                    margin-bottom: -2px !important
-                    transform: rotate(-225deg) !important
+                & > a
+                    color: #FFBE00
+                    &::after
+                        margin-bottom: -2px !important
+                        transform: rotate(-225deg) !important
                 & .header__nav-sublist
                     visibility: visible
                     opacity: 1

@@ -3,6 +3,8 @@ export default function stickyHeader() {
 
     const header = document.querySelector(".header-sticky")
 
+    const scrollButton = document.querySelector('.scroll-top')
+
     const config = {
         rootMargin: "0px",
         threshold: 0.8,
@@ -12,9 +14,12 @@ export default function stickyHeader() {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 header.classList.remove("sticky")
+                scrollButton.classList.remove("active")
+
             } else {
                 if (entry.rootBounds.y >= entry.boundingClientRect.y) {
                     header.classList.add("sticky")
+                    scrollButton.classList.add("active")
                 }
             }
         })

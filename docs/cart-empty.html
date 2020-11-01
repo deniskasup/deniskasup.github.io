@@ -6,7 +6,7 @@
     <title>TD Monolite</title>
     <link rel="stylesheet" href="./css/main.css">
   </head>
-  <body>
+  <body id="body">
     <div class="sidebar">
       <div class="sidebar__top"><a class="sidebar__logo" href="/">
               <svg class="svg logo-full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -198,113 +198,8 @@
         <div class="wrapper">
           <div class="cart__title-block">
             <h1 class="title-1 cart__title">Корзина</h1>
-            <div class="cart__delete-all"><a href="#">Удалить все товары</a>
-              <div class="cart__delete-all-button">
-                    <svg class="svg icon-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                      <use xlink:href="./img/svg-sprite.svg#icon-close"></use>
-                    </svg>
-              </div>
-            </div>
           </div>
-          <table class="cart__list">
-            <thead class="cart__list-header">
-              <th></th>
-              <th>Цена</th>
-              <th>Количество</th>
-              <th>Стоимость</th>
-              <th></th>
-            </thead>
-            <tbody class="cart__list-items">
-              <tr class="cart__item">
-                <td class="cart__item-product">
-                  <div><a class="cart__item-product-img" href="#"><img src="./img/beton/beton1.png" alt=""></a>
-                    <div class="cart__item-product-info"><a class="cart__item-product-title" href="#">Бетон товарный</a>
-                      <div class="cart__item-product-art">Арт. 998393</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="cart__item-price">0 руб.</td>
-                <td class="cart__item-quantity">
-                  <div class="quantity-block">
-                    <button>-</button>
-                    <input type="text" name="" min="0" value="2">
-                    <button>+</button>
-                  </div>
-                </td>
-                <td class="cart__item-total-price">3000 руб.</td>
-                <td>
-                  <div class="cart__item-delete">
-                        <svg class="svg icon-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                          <use xlink:href="./img/svg-sprite.svg#icon-close"></use>
-                        </svg>
-                  </div>
-                </td>
-              </tr>
-              <tr class="cart__item">
-                <td class="cart__item-product">
-                  <div><a class="cart__item-product-img" href="#"><img src="./img/beton/beton1.png" alt=""></a>
-                    <div class="cart__item-product-info"><a class="cart__item-product-title" href="#">Бетон товарный</a>
-                      <div class="cart__item-product-art">Арт. 998393</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="cart__item-price">0 руб.</td>
-                <td class="cart__item-quantity">
-                  <div class="quantity-block">
-                    <button>-</button>
-                    <input type="text" name="" min="0" value="2">
-                    <button>+</button>
-                  </div>
-                </td>
-                <td class="cart__item-total-price">3000 руб.</td>
-                <td>
-                  <div class="cart__item-delete">
-                        <svg class="svg icon-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                          <use xlink:href="./img/svg-sprite.svg#icon-close"></use>
-                        </svg>
-                  </div>
-                </td>
-              </tr>
-              <tr class="cart__item">
-                <td class="cart__item-product">
-                  <div><a class="cart__item-product-img" href="#"><img src="./img/beton/beton1.png" alt=""></a>
-                    <div class="cart__item-product-info"><a class="cart__item-product-title" href="#">Бетон товарный</a>
-                      <div class="cart__item-product-art">Арт. 998393</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="cart__item-price">0 руб.</td>
-                <td class="cart__item-quantity">
-                  <div class="quantity-block">
-                    <button>-</button>
-                    <input type="text" name="" min="0" value="2">
-                    <button>+</button>
-                  </div>
-                </td>
-                <td class="cart__item-total-price">3000 руб.</td>
-                <td>
-                  <div class="cart__item-delete">
-                        <svg class="svg icon-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                          <use xlink:href="./img/svg-sprite.svg#icon-close"></use>
-                        </svg>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="cart__total">
-            <div class="cart__total-content">
-              <div class="cart__total-print">
-                    <svg class="svg icon-print" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                      <use xlink:href="./img/svg-sprite.svg#icon-print"></use>
-                    </svg><span>Распечатать смету</span>
-              </div>
-              <div class="cart__total-price"><b>Всего 3 товара на сумму</b><span>6 000 руб.</span>
-                <p>Без учёта стоимости доставки</p>
-              </div>
-            </div>
-          </div>
-          <div class="cart__buttons"><a class="white-btn" href="#">Вернуться к покупкам</a><a class="yellow-btn" href="#">Узнать стоимость с доставкой</a></div>
+          <div class="cart__empty"><span>Корзина пока пуста</span><a class="yellow-btn" href="#"> Вернуться к покупкам	</a></div>
         </div>
       </section>
       <section class="map">

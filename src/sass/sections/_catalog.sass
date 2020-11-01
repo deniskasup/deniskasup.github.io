@@ -19,6 +19,8 @@
         overflow: hidden
         border-radius: 2px
         &:hover
+            .catalog__card-title span
+                border-bottom-color: transparent
             .catalog__card-img
                 transform: scale(1.02)
         &-img
@@ -39,6 +41,7 @@
             +until-tablet
                 height: 50px
             & span
+                transition: border-bottom-color .3s
                 text-transform: uppercase
                 padding-bottom: 3px
                 border-bottom: 1px dashed #3C3C3B

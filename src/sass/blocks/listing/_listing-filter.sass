@@ -112,6 +112,11 @@
                         transition: border-color .3s
                         &:hover
                             border-bottom-color: transparent
+                            &::before
+                                border-color: #b1b2b3
+                    &:hover
+                        &::before
+                            border-color: #b1b2b3
                     &::before
                         flex-shrink: 0
                         content: ""

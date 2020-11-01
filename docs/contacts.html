@@ -6,7 +6,7 @@
     <title>TD Monolite</title>
     <link rel="stylesheet" href="./css/main.css">
   </head>
-  <body>
+  <body id="body">
     <div class="sidebar">
       <div class="sidebar__top"><a class="sidebar__logo" href="/">
               <svg class="svg logo-full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -28,12 +28,10 @@
       </div>
       <div class="sidebar__products"><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-1.png" alt=""><span>Нерудные материалы </span></a><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-2.png" alt=""><span>Бетон товарный</span></a><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-3.png" alt=""><span>ЖБИ изделия </span></a><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-4.png" alt=""><span>Металлопрокат</span></a><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-5.png" alt=""><span>Стеновые материалы</span></a><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-6.png" alt=""><span>Кровельные материалы</span></a><a class="sidebar__products-item" href="#"><img src="./img/sidebar/products-7.png" alt=""><span>Утеплитель</span></a></div>
       <div class="sidebar__info"><span>ООО «СК «Монолит»</span><a href="mailto:info@monolit78.ru">info@monolit78.ru</a><span>
-           Город работы:
-          <div class="sidebar__info-city">
+           Город работы:<a class="sidebar__info-city" href="#city" data-fancybox>
                 <svg class="svg icon-place" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
                   <use xlink:href="./img/svg-sprite.svg#icon-place"></use>
-                </svg><span>Санкт-Петербург</span>
-          </div></span></div>
+                </svg><span>Санкт-Петербург</span></a></span></div>
     </div>
     <div class="mobile-header">
       <div class="mobile-header__phone">
@@ -170,15 +168,13 @@
             <div class="header__contacts">
               <div class="header__contacts-city">п. Мурино, ул. Кооперативная 20Б</div>
               <div class="header__contacts-time">Часы работы: с 8:00 до 21:00</div>
-            </div>
-            <div class="header__cart">
+            </div><a class="header__cart" href="#">
               <div class="header__cart-button">
                     <svg class="svg icon-cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
                       <use xlink:href="./img/svg-sprite.svg#icon-cart"></use>
                     </svg>
                 <div class="header__cart-value">3</div>
-              </div><span>Корзина</span>
-            </div>
+              </div><span>Корзина</span></a>
           </div>
           <nav class="header__nav">
             <ul class="header__nav-list">
@@ -209,8 +205,7 @@
             <h1 class="title-1 contacts__title">Контакты</h1>
             <ul class="contacts__list">
               <li class="contacts__item fadeInUp">
-                <div class="contacts__item-key"><span>Отдел продаж</span></div>
-                <div class="contacts__item-value">+7 (812) 602-60-82</div>
+                <div class="contacts__item-key"><span>Отдел продаж</span></div><a class="contacts__item-value" href="#">+7 (812) 602-60-82</a>
               </li>
               <li class="contacts__item fadeInUp">
                 <div class="contacts__item-key"><span>Приём заявок</span></div>
@@ -221,8 +216,7 @@
                 <div class="contacts__item-value">Пн-пт с 08:00 - 21:00</div>
               </li>
               <li class="contacts__item fadeInUp">
-                <div class="contacts__item-key"><span>E-mail для заявок</span></div>
-                <div class="contacts__item-value">app@apapapaapa</div>
+                <div class="contacts__item-key"><span>E-mail для заявок</span></div><a class="contacts__item-value" href="#">app@apapapaapa</a>
               </li>
               <li class="contacts__item fadeInUp">
                 <div class="contacts__item-key"><span>Адрес</span></div>
@@ -249,7 +243,7 @@
             </div>
           </div>
           <div class="contacts__map">
-            <div class="map__container fadeInUp"><iframe  src="https://yandex.ru/map-widget/v1/?um=constructor%3A7b962d475832f8eeb3502be6df583bbdf63046c41237e6229a6e429c17422f99&amp;source=constructor"  width="100%" height="300" frameborder="0"></iframe></div>
+            <div class="map__container fadeInUp"><iframe  src="https://yandex.ru/map-widget/v1/?um=constructor%3A7b962d475832f8eeb3502be6df583bbdf63046c41237e6229a6e429c17422f99&amp;source=constructor"  width="100%" height="100%" frameborder="0"></iframe></div>
           </div>
         </div>
       </section>
@@ -401,7 +395,7 @@
             </div><a class="footer__policy" href="#">Политика конфиденциальности</a>
           </div>
         </div>
-      </footer>
+      </footer><a class="scroll-top" href="#body"><img src="./img/scroll-top.png" alt=""></a>
     </div>
     <div class="popup" id="callback">
       <div class="popup__form form">

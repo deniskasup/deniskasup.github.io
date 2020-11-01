@@ -1,0 +1,30 @@
+.scroll-top
+    visibility: hidden
+    opacity: 0
+    transition: opacity .3s, visibility .3s
+    z-index: 10
+    position: fixed
+    bottom: 80px
+    right: 80px
+    &:hover
+        &::before
+            opacity: 1
+        &::after
+            opacity: 1
+    &::after
+    &::before
+        opacity: 0
+        transition: opacity .3s
+        content: ' Прокрутить наверх'
+        font-size: 8px
+        padding: 2px 4px
+        border-radius: 1px
+        background-color: #B1B2B3
+        position: absolute
+        top: -20px
+        right: 0
+        width: max-content
+
+    &.active
+        opacity: 1
+        visibility: visible
