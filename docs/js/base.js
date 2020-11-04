@@ -12314,9 +12314,17 @@ function initDropdown() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return stickyHeader; });
 function stickyHeader() {
-  var point = document.querySelector("header");
+  var point;
+
+  if (window.matchMedia('(min-width: 1024px)').matches) {
+    point = document.querySelector("header");
+  } else {
+    point = document.querySelector(".mobile-header");
+  }
+
   var header = document.querySelector(".header-sticky");
   var scrollButton = document.querySelector('.scroll-top');
+  var filterButton = document.querySelector('.listing__filter-button');
   var config = {
     rootMargin: "0px",
     threshold: 0.8
@@ -12327,10 +12335,18 @@ function stickyHeader() {
       if (entry.isIntersecting) {
         header.classList.remove("sticky");
         scrollButton.classList.remove("active");
+
+        if (filterButton) {
+          filterButton.classList.remove('active');
+        }
       } else {
         if (entry.rootBounds.y >= entry.boundingClientRect.y) {
           header.classList.add("sticky");
           scrollButton.classList.add("active");
+
+          if (filterButton) {
+            filterButton.classList.add('active');
+          }
         }
       }
     });
@@ -12369,6 +12385,15 @@ function initListing() {
       linesButton.classList.remove("active");
       products.classList.add("grid");
     };
+  }
+
+  var listingButton = document.querySelector('.listing__filter-button');
+  var filter = document.querySelector('.listing__filter');
+
+  if (listingButton) {
+    listingButton.addEventListener('click', function () {
+      filter.classList.toggle('active');
+    });
   }
 }
 
@@ -12521,13 +12546,22 @@ var popularSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product
 if (window.matchMedia("(max-width: 1349px)").matches) {
   var clinetsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".clients__list", {
     loop: true,
-    slidesPerView: "auto",
+    // slidesPerView: "auto",
     lazy: {
       loadPrevNext: true
     },
     navigation: {
       nextEl: ".clients__list .swiper-button-next",
       prevEl: ".clients__list .swiper-button-prev"
+    },
+    breakpoints: {
+      300: {
+        spaceBetween: 30,
+        slidesPerView: 1
+      },
+      400: {
+        slidesPerView: "auto"
+      }
     }
   });
 }

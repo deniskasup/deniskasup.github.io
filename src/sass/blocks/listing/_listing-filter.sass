@@ -1,11 +1,39 @@
 .listing__filter
     width: 265px
+    transition: right .3s
     background: #FFFFFF
     margin-right: 10px
+    position: relative
     +media-until(1200px)
+        z-index: 20
         position: fixed
-        right: -100%
+        right: -265px
+        margin-right: 0
         top: 45px
+        overflow: auto
+        max-height: calc(100vh -45px)
+        // overflow-y: auto
+        // overflow-x: visible
+    +until-desktop
+        top: 42px
+    &.active
+        right: 0
+    &-button
+        width: 45px
+        height: 90px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 100%
+        background: url(../img/filter-button.png) no-repeat center
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+        &.active
+            visibility: visible
+            opacity: 1
+        +media-from(1200px)
+            display: none
     &-block
         border-radius: 2px
         width: 100%

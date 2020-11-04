@@ -14,4 +14,14 @@ export default function initListing() {
             products.classList.add("grid")
         }
     }
+
+
+    const listingButton = document.querySelector('.listing__filter-button')
+    const filter = document.querySelector('.listing__filter')
+
+    if (listingButton) {
+        listingButton.addEventListener('click', () => {
+            filter.classList.toggle('active')
+        })
+    }
 }

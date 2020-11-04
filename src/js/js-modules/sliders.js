@@ -39,7 +39,7 @@ const popularSwiper = new Swiper(".product-slider .swiper-container", {
 if (window.matchMedia("(max-width: 1349px)").matches) {
     const clinetsSwiper = new Swiper(".clients__list", {
         loop: true,
-        slidesPerView: "auto",
+        // slidesPerView: "auto",
         lazy: {
             loadPrevNext: true,
         },
@@ -47,6 +47,16 @@ if (window.matchMedia("(max-width: 1349px)").matches) {
             nextEl: ".clients__list .swiper-button-next",
             prevEl: ".clients__list .swiper-button-prev",
         },
+        breakpoints: {
+            300: {
+                spaceBetween: 30,
+                slidesPerView: 1,
+            },
+
+            400: {
+                slidesPerView: "auto",
+            }
+        }
     })
 }
 
