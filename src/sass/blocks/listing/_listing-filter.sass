@@ -5,43 +5,61 @@
     margin-right: 10px
     position: relative
     +media-until(1200px)
+        height: 100%
+        overflow-y: scroll
+        box-shadow: 0 0 5px #eaeaea
         z-index: 20
         position: fixed
         right: -265px
         margin-right: 0
         top: 45px
-        overflow: auto
+        // overflow-y: scroll
         max-height: calc(100vh -45px)
-        // overflow-y: auto
-        // overflow-x: visible
     +until-desktop
         top: 42px
     &.active
         right: 0
+    &-clear
+        align-self: flex-end
+        border-bottom: 1px dashed $orange
+        color: $orange
+        margin-bottom: 15px
+        transition: border-bottom-color .3s
+        &:hover
+            border-bottom-color: transparent
     &-button
         width: 45px
         height: 90px
-        position: absolute
+        position: fixed
+        z-index: 20
         top: 50%
         transform: translateY(-50%)
-        right: 100%
+        right: 0
         background: url(../img/filter-button.png) no-repeat center
         opacity: 0
         visibility: hidden
-        transition: opacity .3s, visibility .3s
+        transition: opacity .3s, visibility .3s, right .3s
         &.active
             visibility: visible
             opacity: 1
+        &.opened
+            right: 265px
         +media-from(1200px)
             display: none
     &-block
+        display: flex
+        flex-direction: column
         border-radius: 2px
         width: 100%
         border: 1px solid #EAEAEA
         padding: 20px 20px 20px
         transition: padding .3s
+        +until-tablet
+            padding: 15px
         &.active
             padding: 20px 20px 30px
+            +until-tablet
+                padding: 15px 15px 25px
             & .listing__filter-block-content
                 max-height: 600px
                 opacity: 1
@@ -50,6 +68,8 @@
             & .listing__filter-block-arrow
                 transform: rotate(135deg)
                 margin-top: 5px
+        &:first-of-type
+            padding-top: 15px
         &:not(:first-of-type)
             border-top: 0
         &-header
@@ -65,6 +85,7 @@
         &-arrow
             cursor: pointer
             margin-left: 10px
+            margin-right: 3px
             flex-shrink: 0
             width: 12px
             height: 12px

@@ -21,7 +21,9 @@ export default function initListing() {
 
     if (listingButton) {
         listingButton.addEventListener('click', () => {
+            listingButton.classList.toggle('opened')
             filter.classList.toggle('active')
+            document.body.classList.toggle('filter-opened')
         })
     }
 }
