@@ -72,7 +72,7 @@ const listingSlider = new Swiper(".listing__tags", {
 if (window.matchMedia("(max-width: 1200px)").matches) {
     const officeSlider = new Swiper(".office__cards", {
         loop: true,
-        slidesPerView: "auto",
+        // slidesPerView: "auto",
         lazy: {
             loadPrevNext: true,
         },
@@ -80,5 +80,14 @@ if (window.matchMedia("(max-width: 1200px)").matches) {
             nextEl: ".office__cards .swiper-button-next",
             prevEl: ".office__cards .swiper-button-prev",
         },
+        breakpoints: {
+            300: {
+                spaceBetween: 30,
+                slidesPerView: 1,
+            },
+
+            400: {
+                slidesPerView: "auto",
+            }
     })
 }
