@@ -89,5 +89,6 @@ if (window.matchMedia("(max-width: 1200px)").matches) {
             400: {
                 slidesPerView: "auto",
             }
+        }
     })
 }
